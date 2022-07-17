@@ -1,7 +1,8 @@
 spring:
   jpa:
-    database: System.env("DATABASE")
+    database: POSTGRESQL
   datasource:
-    url: System.env("DATABASE_URL")
-    username: System.env("DB_USER")
-    password: System.env("PASSWWORD")
+    platform: postgres
+    url: ${DATABASE_URL}
+    username: ${DB_USER}
+    password: ${PASSWORD}
